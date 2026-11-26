@@ -1,0 +1,17 @@
+{
+  "auth": false,
+  "products": {
+    "properties": {
+      "title": "string",
+      "price": "number",
+      "isActive": "boolean",
+      "image": "file",
+      "attachments": "files"
+    }
+  },
+  "categories": {
+    "properties": {
+      "title": "string"
+    }
+  }
+}

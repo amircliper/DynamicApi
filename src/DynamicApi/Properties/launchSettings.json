@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "DynamicApi": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "dotnetRunMessages": true,
+      "environmentVariables": {
+        "DYNAMICAPI_USE_SOURCE_DATA": "true"
+      }
+    }
+  }
+}

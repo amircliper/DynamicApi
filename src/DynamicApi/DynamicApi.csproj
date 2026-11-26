@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>DynamicApi</AssemblyName>
+    <PublishTrimmed>false</PublishTrimmed>
+    <DefaultItemExcludes>$(DefaultItemExcludes);App_Data/**;artifacts/**</DefaultItemExcludes>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
+    <AssemblyMetadata Include="DynamicApiProjectDirectory" Value="$(MSBuildProjectDirectory)" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.15" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="10.3.1" />
+    <Content Update="schema.json;users.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+  </ItemGroup>
+</Project>
